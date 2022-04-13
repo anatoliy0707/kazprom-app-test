@@ -1,6 +1,5 @@
 import {v1} from "uuid";
 
-
 export const itemsReducer = (state: ItemType[] = [], action: itemsActionsType): ItemType[] => {
     switch (action.type) {
         case "items/ADD_ITEM":

@@ -11,15 +11,12 @@ export const AddChildModal = ({onSave, onCancel}: PropsType) => {
     const [value, setValue] = useState<string>('')
     const [error, setError] = useState<string | null>(null)
 
-    // const onChangeHandler: ComponentProps<typeof SuperInputText>['onChangeText'] = (value) => {
-    //     setName(value)
-    // }
-
-    const onSaveCallBack = () => {
+    const onSaveHandler = () => {
         if (value.trim() === '') {
             setError('Is required!')
+        } else {
+            onSave(value.trim())
         }
-        onSave(value)
     }
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -33,12 +30,13 @@ export const AddChildModal = ({onSave, onCancel}: PropsType) => {
                 <h3>Добавить запись</h3>
             </div>
             <div className={style.inputBlock}>
-                {error && <span>{error}</span>}
-                <input className={style.input} onChange={onChangeHandler} value={value} type="text"/>
+                {error && <span className={style.error}>{error}</span>}
+                <input className={`${style.input} ${error ? style.errorInput : ''}`} onChange={onChangeHandler}
+                       value={value} type="text"/>
             </div>
             <div className={style.buttonBlock}>
                 <button onClick={onCancel}>Отмена</button>
-                <button disabled={false} onClick={onSaveCallBack}>Ok</button>
+                <button onClick={onSaveHandler}>Ok</button>
             </div>
         </div>
     )

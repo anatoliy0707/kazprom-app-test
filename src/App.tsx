@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
-import { useSelector } from 'react-redux';
+import React, {useState} from 'react'
+import {useSelector} from 'react-redux';
 import style from './App.module.css';
-import { List } from './component/List';
-import { AddChildModal } from './component/modal/addChildModal/AddChildModal';
+import {List} from './component/List';
+import {AddChildModal} from './component/modal/addChildModal/AddChildModal';
 import Modal from './component/modal/Modal';
-import { ItemType } from './store/itemsReducer';
-import { AppRootStateType } from './store/store';
+import {ItemType} from './store/itemsReducer';
+import {AppRootStateType} from './store/store';
 
 export enum EModeType {
     ADD_MODE = 'ADD_MODE',
@@ -32,16 +32,18 @@ function App() {
                     <button>Тест GQL</button>
                 </div>
                 <div className={style.listBlock}>
-                    <List items={items} />
+                    <List items={items}/>
                 </div>
             </div>
-            <Modal width={395}
+            <Modal
+                width={395}
                 height={221}
                 enableBackground={true}
                 backgroundOnClick={() => setShowModal(false)}
                 show={showModal}
             >
-                {mode === EModeType.ADD_MODE && <AddChildModal onSave={() => { }} />}
+                {mode === EModeType.ADD_MODE && <AddChildModal onSave={() => {
+                }}/>}
             </Modal>
         </div>
     )
