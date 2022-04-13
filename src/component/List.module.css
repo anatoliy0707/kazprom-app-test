@@ -1,0 +1,12 @@
+ul {
+    list-style: none;
+    padding-inline-start: 0px;
+    width: 80%;
+}
+
+.listItem {
+    background-color: #F8F7FD;
+    border-top: 1px solid lightgrey;
+    height: 48px;
+    line-height: 48px;
+}

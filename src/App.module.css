@@ -1,0 +1,51 @@
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(238, 174, 202);
+  background: linear-gradient(180deg, #E6D4DE 0%, #9890C7 100%);
+}
+
+.container {
+  width: 800px;
+  height: 650px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.controlBlock {
+  width: 80%;
+  height: 20%;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+}
+
+.controlBlock button {
+  width: 184px;
+  height: 55px;
+  margin-left: 22px;
+  border-radius: 20px;
+  color: white;
+  background-color: mediumblue;
+  box-shadow: 3px 3px 10px gray;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.listBlock {
+  width: 80%;
+  height: 65%;
+  border: 1px solid;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow-x: hidden;
+}
